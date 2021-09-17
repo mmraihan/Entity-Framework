@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace ZooApp.Models
 {
-    class ZooContext : DbContext
+    public class ZooContext : DbContext
     {
         public ZooContext() : base("ZooContext")
         {
