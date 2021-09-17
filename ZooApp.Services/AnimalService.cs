@@ -42,6 +42,8 @@ namespace ZooApp.Services
             
         }
 
+       
+
         public ViewAnimal GetAnimal(int id)
         {
             Animal animal=  db.Animals.Find(id);
@@ -53,6 +55,14 @@ namespace ZooApp.Services
                 Food = animal.Food,
                 Name = animal.Name
             };
+
+        }
+
+        public bool Save(Animal animal)
+        {
+           Animal add= db.Animals.Add(animal);
+            db.SaveChanges();
+            return true;
 
         }
 
