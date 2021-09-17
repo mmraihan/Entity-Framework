@@ -43,5 +43,36 @@ namespace ZooAppp.MvcClient.Controllers
         }
 
 
+        [HttpGet]
+        public ActionResult Edit(int id)
+        {
+            Animal animal=service.GetDbAnimal(id);
+            return View(animal);
+        }
+
+        [HttpPost]
+        public ActionResult Edit(Animal animal)
+        {
+            //Save
+            bool saved = service.Update(animal);
+            return RedirectToAction("Index");
+        }
+
+
+        [HttpGet]
+        public ActionResult Delete()
+        {
+            return View();
+        }
+
+        [HttpPost]
+        public ActionResult Delete(Animal animal)
+        {
+            //Save
+            bool saved = service.Delete(animal);
+            return RedirectToAction("Index");
+        }
+
+
     }
 }
