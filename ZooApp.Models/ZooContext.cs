@@ -7,13 +7,13 @@ using System.Threading.Tasks;
 
 namespace ZooApp.Models
 {
-    public class ZooContext : DbContext
+    public class ZooContext : DbContext //ZooContext= ZooDb
     {
         public ZooContext() : base("ZooContext")
         {
 
         }
 
-        public DbSet<Animal> Animals { get; set; }
+        public DbSet<Animal> Animals { get; set; } //Animals=dbo.Animals
     }
 }

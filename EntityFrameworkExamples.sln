@@ -7,6 +7,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ZooApp.Models", "ZooApp.Mod
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ZooAppp.MvcClient", "ZooAppp.MvcClient\ZooAppp.MvcClient.csproj", "{6986F28D-3430-489B-BF1B-115CED248333}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ZooApp.Services", "ZooApp.Services\ZooApp.Services.csproj", "{4D645F71-EFBE-4BE8-9F5A-3CEA6EFBA6CF}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ZooApp.ViewModels", "ZooApp.ViewModels\ZooApp.ViewModels.csproj", "{92122E47-34D9-4335-B9BE-595E6A03ED94}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +25,14 @@ Global
 		{6986F28D-3430-489B-BF1B-115CED248333}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{6986F28D-3430-489B-BF1B-115CED248333}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{6986F28D-3430-489B-BF1B-115CED248333}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4D645F71-EFBE-4BE8-9F5A-3CEA6EFBA6CF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4D645F71-EFBE-4BE8-9F5A-3CEA6EFBA6CF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4D645F71-EFBE-4BE8-9F5A-3CEA6EFBA6CF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4D645F71-EFBE-4BE8-9F5A-3CEA6EFBA6CF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{92122E47-34D9-4335-B9BE-595E6A03ED94}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{92122E47-34D9-4335-B9BE-595E6A03ED94}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{92122E47-34D9-4335-B9BE-595E6A03ED94}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{92122E47-34D9-4335-B9BE-595E6A03ED94}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
