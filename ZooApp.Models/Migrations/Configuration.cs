@@ -21,10 +21,10 @@
 
             context.Animals.Add(new Animal()
             {
-                Food = "Fish",
+               
                 Name = "Dolphin",
                 Origin = "Ocean",
-                Quantity = 5
+               
 
             });
             context.SaveChanges();
