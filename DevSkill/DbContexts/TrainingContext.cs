@@ -31,8 +31,19 @@ namespace DevSkill.DbContexts
             base.OnConfiguring(dbContextOptionsBuilder);
         }
 
+        protected override void OnModelCreating(ModelBuilder builder)  //Fluent API
+        {
+            builder.Entity<CourseStudent>()
+                .HasKey(cs => new { cs.CourseId, cs.StudentId });  //For creating primary key
+
+            base.OnModelCreating(builder);
+        }
 
         public DbSet<Student> students { get; set; }
         public DbSet<Course> Course { get; set; }
+
+
+
+
     }
 }

@@ -12,6 +12,7 @@ namespace DevSkill.Entities
         public string Title { get; set; }
         public double Fees { get; set; }
         public List<Topic> Topics { get; set; } //1 to Many Relationship
+        public List<CourseStudent> CourseStudents { get; set; }
 
     }
 }

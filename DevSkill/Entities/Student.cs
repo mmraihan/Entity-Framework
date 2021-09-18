@@ -12,5 +12,7 @@ namespace DevSkill.Entities
         public string Name { get; set; }
         public DateTime DateOfBirth { get; set; }
         public double CGPA { get; set; }
+
+        public List<CourseStudent> StudentCourses { get; set; }
     }
 }
