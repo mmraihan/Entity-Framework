@@ -6,12 +6,9 @@ using System.Threading.Tasks;
 
 namespace DevSkill.Entities
 {
-    public class Course
+    public  class Topic
     {
         public int Id { get; set; }
-        public string Title { get; set; }
-        public double Fees { get; set; }
-        public List<Topic> Topics { get; set; } //1 to Many Relationship
-
+        public string Name { get; set; }
     }
 }
