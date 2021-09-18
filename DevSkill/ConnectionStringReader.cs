@@ -19,4 +19,4 @@ namespace DevSkill
 //Command Migration, Update
 //dotnet ef migrations add AddStudentTable --context TrainingContext --project DevSkill
 //dotnet ef database update --context TrainingContext --project DevSkill
-//
+
