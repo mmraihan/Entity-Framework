@@ -14,5 +14,6 @@ namespace DevSkill.Entities
         public List<Topic> Topics { get; set; } //1 to Many Relationship
         public List<CourseStudent> CourseStudents { get; set; }
 
+
     }
 }

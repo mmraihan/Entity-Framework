@@ -41,17 +41,57 @@ namespace DevSkill
 
             #region Retrieving Data One to Many
 
-            var course=context.Course.Where(x => x.Id == 2)
+            var course=context.Course.Where(x => x.Id == 1)
                 .Include("Topics")
                 .FirstOrDefault();
 
-            Console.WriteLine($"Course Title: {course.Title}");
-            Console.WriteLine("--------Topics:--------------");
-            foreach (var item in course.Topics)
+            //Console.WriteLine($"Course Title: {course.Title}");
+            //Console.WriteLine("--------Topics:--------------");
+            //foreach (var item in course.Topics)
+            //{
+            //    Console.WriteLine(item.Name);
+            //}
+            //Console.ReadKey();
+
+            #endregion
+
+
+            #region Many to Many RelationShip
+
+            //Notes
+
+            var student = context.students.FirstOrDefault();
+
+
+            course.CourseStudents = new List<CourseStudent>();
+            course.CourseStudents.Add(new CourseStudent { Student = student });
+            context.SaveChanges();
+
+            #endregion
+
+            #region Retrieving Data Many to Many
+
+            var courses= context.Course
+                .Include(b => b.CourseStudents)
+                .ThenInclude(t => t.Student)
+                .Include(d => d.Topics).ToList();
+
+            foreach (var c in courses)
             {
-                Console.WriteLine(item.Name);
+                Console.WriteLine($"{c.Title}");
+                foreach (var s in c.CourseStudents)
+                {
+                    Console.WriteLine($"{s.Student.Name}");
+                }
+
+                //foreach (var t in c.Topics)
+                //{
+                //    Console.WriteLine($"{ t.Name}");
+                //}
             }
+
             Console.ReadKey();
+            
 
             #endregion
 
