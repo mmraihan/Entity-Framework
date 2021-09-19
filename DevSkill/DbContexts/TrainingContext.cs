@@ -35,7 +35,32 @@ namespace DevSkill.DbContexts
         {
             builder.Entity<CourseStudent>()
                 .HasKey(cs => new { cs.CourseId, cs.StudentId });  //For creating primary key
-             
+
+            #region One to Many
+            builder.Entity<Course>()
+               .HasMany(p => p.Topics) //Course has many topics
+               .WithOne(i => i.Course); // Topic has  one course
+            #endregion
+
+            #region Many to Many
+
+            builder.Entity<CourseStudent>()
+                .HasOne(pc => pc.Course)
+                .WithMany(p => p.CourseStudents)
+                .HasForeignKey(p => p.CourseId);
+
+            builder.Entity<CourseStudent>()
+                .HasOne(pc => pc.Student)
+                .WithMany(pc => pc.StudentCourses)
+                .HasForeignKey(pc => pc.StudentId);
+                
+                
+
+            #endregion
+
+
+
+
             base.OnModelCreating(builder);
         }
 
