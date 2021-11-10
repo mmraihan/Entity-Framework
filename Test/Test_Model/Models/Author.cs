@@ -33,5 +33,11 @@ namespace Test_Model.Models
             
          }
 
+        #region Many To Many
+
+        public ICollection<BookInAuthor> BookInAuthors { get; set; }
+
+        #endregion
+
     }
 }

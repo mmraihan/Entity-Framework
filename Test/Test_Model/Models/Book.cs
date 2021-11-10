@@ -35,5 +35,12 @@ namespace Test_Model.Models
         public int Publisher_Id { get; set; }
         public Publisher Publisher { get; set; }
 
+
+        #region Many To Mnay
+        //Book has many writers and Many writers has many books
+
+        public ICollection<BookInAuthor> BookInAuthors { get; set; }
+        #endregion
+
     }
 }

@@ -16,6 +16,8 @@ namespace Test_Model.Models
         [Required]
         public string Location { get; set; }
 
+        // One to many. Publisher has many books
+
         public List<Book> Books { get; set; }
     }
 }

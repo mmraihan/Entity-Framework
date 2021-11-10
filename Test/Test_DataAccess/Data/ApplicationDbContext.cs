@@ -21,5 +21,13 @@ namespace Test_DataAccess.Data
         public DbSet<Author> Authors { get; set; }
         public DbSet<Publisher> Publishers { get; set; }
         public DbSet<BookDetail> BookDetails { get; set; }
+
+        public DbSet <BookInAuthor> BookInAuthor { get; set; }
+
+        protected override void OnModelCreating(ModelBuilder modelBuilder)
+        {
+            //Creating composite key using Fluent API
+            modelBuilder.Entity<BookInAuthor>().HasKey(ba => new { ba.Author_Id, ba.Book_Id });
+        }
     }
 }
