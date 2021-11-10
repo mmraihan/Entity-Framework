@@ -27,5 +27,13 @@ namespace Test_Model.Models
         [ForeignKey("BookDetail")]
         public int BookDetail_Id { get; set; }
         public BookDetail BookDetail { get; set; } //Navigation Property 
+
+
+        // One to many. Publisher has many books
+
+        [ForeignKey("Publisher")]
+        public int Publisher_Id { get; set; }
+        public Publisher Publisher { get; set; }
+
     }
 }
