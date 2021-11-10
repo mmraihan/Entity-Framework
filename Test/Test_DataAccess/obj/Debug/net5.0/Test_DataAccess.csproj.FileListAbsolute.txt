@@ -14,5 +14,4 @@ C:\Development\Entity-Framework\Test\Test_DataAccess\obj\Debug\net5.0\ref\Test_D
 C:\Development\Entity-Framework\Test\Test_DataAccess\obj\Debug\net5.0\Test_DataAccess.pdb
 C:\Development\Entity-Framework\Test\Test_DataAccess\bin\Debug\net5.0\Test_DataAccess.runtimeconfig.json
 C:\Development\Entity-Framework\Test\Test_DataAccess\bin\Debug\net5.0\Test_DataAccess.runtimeconfig.dev.json
-C:\Development\Entity-Framework\Test\Test_DataAccess\obj\Debug\net5.0\Test_DataAccess.csproj.CopyComplete
 C:\Development\Entity-Framework\Test\Test_DataAccess\obj\Debug\net5.0\Test_DataAccess.genruntimeconfig.cache
