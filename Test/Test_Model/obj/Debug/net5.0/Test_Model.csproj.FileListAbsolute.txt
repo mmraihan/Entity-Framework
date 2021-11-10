@@ -1,0 +1,15 @@
+C:\Development\Entity-Framework\Test\Test_Model\bin\Debug\net5.0\Test_Model.deps.json
+C:\Development\Entity-Framework\Test\Test_Model\bin\Debug\net5.0\Test_Model.dll
+C:\Development\Entity-Framework\Test\Test_Model\bin\Debug\net5.0\ref\Test_Model.dll
+C:\Development\Entity-Framework\Test\Test_Model\bin\Debug\net5.0\Test_Model.pdb
+C:\Development\Entity-Framework\Test\Test_Model\obj\Debug\net5.0\Test_Model.csproj.AssemblyReference.cache
+C:\Development\Entity-Framework\Test\Test_Model\obj\Debug\net5.0\Test_Model.GeneratedMSBuildEditorConfig.editorconfig
+C:\Development\Entity-Framework\Test\Test_Model\obj\Debug\net5.0\Test_Model.AssemblyInfoInputs.cache
+C:\Development\Entity-Framework\Test\Test_Model\obj\Debug\net5.0\Test_Model.AssemblyInfo.cs
+C:\Development\Entity-Framework\Test\Test_Model\obj\Debug\net5.0\Test_Model.csproj.CoreCompileInputs.cache
+C:\Development\Entity-Framework\Test\Test_Model\obj\Debug\net5.0\Test_Model.dll
+C:\Development\Entity-Framework\Test\Test_Model\obj\Debug\net5.0\ref\Test_Model.dll
+C:\Development\Entity-Framework\Test\Test_Model\obj\Debug\net5.0\Test_Model.pdb
+C:\Development\Entity-Framework\Test\Test_Model\bin\Debug\net5.0\Test_Model.runtimeconfig.json
+C:\Development\Entity-Framework\Test\Test_Model\bin\Debug\net5.0\Test_Model.runtimeconfig.dev.json
+C:\Development\Entity-Framework\Test\Test_Model\obj\Debug\net5.0\Test_Model.genruntimeconfig.cache
