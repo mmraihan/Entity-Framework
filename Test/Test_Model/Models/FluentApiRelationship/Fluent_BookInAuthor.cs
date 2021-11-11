@@ -5,14 +5,14 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Test_Model.Models
+namespace Test_Model.Models.FluentApiRelationship
 {
    public class Fluent_BookInAuthor
-    {
-
+    {  
         public int Book_Id { get; set; }
         public Book Book { get; set; }
         public int Author_Id { get; set; }
         public Author Author { get; set; }
+
     }
 }

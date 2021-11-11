@@ -3,15 +3,17 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using Test_DataAccess.Data;
 
 namespace Test_DataAccess.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    partial class ApplicationDbContextModelSnapshot : ModelSnapshot
+    [Migration("20211111103131_fluentAPI")]
+    partial class fluentAPI
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -141,33 +143,6 @@ namespace Test_DataAccess.Migrations
                     b.ToTable("Categories");
                 });
 
-            modelBuilder.Entity("Test_Model.Models.FluentApiRelationship.Fluent_Book", b =>
-                {
-                    b.Property<int>("Book_Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("int")
-                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
-
-                    b.Property<string>("ISBN")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<double>("Price")
-                        .HasColumnType("float");
-
-                    b.Property<string>("PriceRange")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("Title")
-                        .IsRequired()
-                        .HasMaxLength(50)
-                        .HasColumnType("nvarchar(50)");
-
-                    b.HasKey("Book_Id");
-
-                    b.ToTable("Fluent_Book");
-                });
-
             modelBuilder.Entity("Test_Model.Models.FluentApiRelationship.Fluent_BookDetail", b =>
                 {
                     b.Property<int>("BookDetail_Id")
@@ -187,77 +162,6 @@ namespace Test_DataAccess.Migrations
                     b.HasKey("BookDetail_Id");
 
                     b.ToTable("Fluent_BookDetails");
-                });
-
-            modelBuilder.Entity("Test_Model.Models.FluentApiRelationship.Fluent_BookInAuthor", b =>
-                {
-                    b.Property<int>("Author_Id")
-                        .HasColumnType("int");
-
-                    b.Property<int>("Book_Id")
-                        .HasColumnType("int");
-
-                    b.Property<int?>("Author_Id1")
-                        .HasColumnType("int");
-
-                    b.Property<int?>("Book_Id1")
-                        .HasColumnType("int");
-
-                    b.HasKey("Author_Id", "Book_Id");
-
-                    b.HasIndex("Author_Id1");
-
-                    b.HasIndex("Book_Id1");
-
-                    b.ToTable("fluent_BookInAuthors");
-                });
-
-            modelBuilder.Entity("Test_Model.Models.FluentApiRelationship.Fluent_Publisher", b =>
-                {
-                    b.Property<int>("Publisher_Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("int")
-                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
-
-                    b.Property<string>("Location")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("Name")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.HasKey("Publisher_Id");
-
-                    b.ToTable("fluent_Publishers");
-                });
-
-            modelBuilder.Entity("Test_Model.Models.Fluent_Author", b =>
-                {
-                    b.Property<int>("Author_Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("int")
-                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
-
-                    b.Property<DateTime>("BirthDate")
-                        .HasColumnType("datetime2");
-
-                    b.Property<string>("FirstName")
-                        .IsRequired()
-                        .HasMaxLength(30)
-                        .HasColumnType("nvarchar(30)");
-
-                    b.Property<string>("LastName")
-                        .IsRequired()
-                        .HasMaxLength(30)
-                        .HasColumnType("nvarchar(30)");
-
-                    b.Property<string>("Location")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.HasKey("Author_Id");
-
-                    b.ToTable("Fluent_Authors");
                 });
 
             modelBuilder.Entity("Test_Model.Models.Genre", b =>
@@ -325,21 +229,6 @@ namespace Test_DataAccess.Migrations
 
                     b.HasOne("Test_Model.Models.Book", "Book")
                         .WithMany("BookInAuthors")
-                        .HasForeignKey("Book_Id1");
-
-                    b.Navigation("Author");
-
-                    b.Navigation("Book");
-                });
-
-            modelBuilder.Entity("Test_Model.Models.FluentApiRelationship.Fluent_BookInAuthor", b =>
-                {
-                    b.HasOne("Test_Model.Models.Author", "Author")
-                        .WithMany()
-                        .HasForeignKey("Author_Id1");
-
-                    b.HasOne("Test_Model.Models.Book", "Book")
-                        .WithMany()
                         .HasForeignKey("Book_Id1");
 
                     b.Navigation("Author");

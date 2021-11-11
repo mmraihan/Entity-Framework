@@ -6,7 +6,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Test_Model.Models
+namespace Test_Model.Models.FluentApiRelationship
 {
    public class Fluent_Book
         
