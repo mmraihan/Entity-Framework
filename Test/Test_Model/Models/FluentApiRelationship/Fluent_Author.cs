@@ -10,19 +10,19 @@ namespace Test_Model.Models
 {
     public class Fluent_Author
     {
-        [Key]
+  
         public int Author_Id { get; set; }
-        [Required]
+       
         public string FirstName { get; set; }
-        [Required]
+      
         public string LastName { get; set; }
-        [Required]
+        
 
         public DateTime BirthDate { get; set; }
-        [Required]
+        
         public string Location { get; set; }
 
-        [NotMapped]
+     
         public string FullName
         {
             get
@@ -33,11 +33,6 @@ namespace Test_Model.Models
             
          }
 
-        #region Many To Many
-
-        public ICollection<BookInAuthor> BookInAuthors { get; set; }
-
-        #endregion
 
     }
 }
