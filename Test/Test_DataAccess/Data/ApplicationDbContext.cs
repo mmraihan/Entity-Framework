@@ -77,6 +77,12 @@ namespace Test_DataAccess.Data
             modelBuilder.Entity<Fluent_BookInAuthor>().HasKey(ba => new { ba.Author_Id, ba.Book_Id });
 
 
+            //Rename Category table and Column Name
+
+            //modelBuilder.Entity<Fluent_Category>().ToTable("tbl_category");
+            //modelBuilder.Entity<Fluent_Category>().Property(a=>a.Name="")
+
+
         }
 
 
