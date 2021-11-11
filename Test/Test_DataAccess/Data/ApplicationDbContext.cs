@@ -78,9 +78,11 @@ namespace Test_DataAccess.Data
 
 
             //Rename Category table and Column Name
+            modelBuilder.Entity<Fluent_Category>().HasKey(b => b.Category_Id);
+            modelBuilder.Entity<Fluent_Category>().ToTable("tblUpdate_category");
+            modelBuilder.Entity<Fluent_Category>().Property(a => a.Name).HasColumnName("Category_Name");
 
-            //modelBuilder.Entity<Fluent_Category>().ToTable("tbl_category");
-            //modelBuilder.Entity<Fluent_Category>().Property(a=>a.Name="")
+
 
 
         }

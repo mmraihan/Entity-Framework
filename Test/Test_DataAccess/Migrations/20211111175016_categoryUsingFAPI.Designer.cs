@@ -3,15 +3,17 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using Test_DataAccess.Data;
 
 namespace Test_DataAccess.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    partial class ApplicationDbContextModelSnapshot : ModelSnapshot
+    [Migration("20211111175016_categoryUsingFAPI")]
+    partial class categoryUsingFAPI
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -221,12 +223,11 @@ namespace Test_DataAccess.Migrations
                         .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
                     b.Property<string>("Name")
-                        .HasColumnType("nvarchar(max)")
-                        .HasColumnName("Category_Name");
+                        .HasColumnType("nvarchar(max)");
 
                     b.HasKey("Category_Id");
 
-                    b.ToTable("tblUpdate_category");
+                    b.ToTable("Fluent_Category");
                 });
 
             modelBuilder.Entity("Test_Model.Models.FluentApiRelationship.Fluent_Publisher", b =>
