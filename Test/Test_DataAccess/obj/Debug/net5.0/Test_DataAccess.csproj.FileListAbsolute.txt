@@ -15,3 +15,4 @@ C:\Development\Entity-Framework\Test\Test_DataAccess\obj\Debug\net5.0\Test_DataA
 C:\Development\Entity-Framework\Test\Test_DataAccess\bin\Debug\net5.0\Test_DataAccess.runtimeconfig.json
 C:\Development\Entity-Framework\Test\Test_DataAccess\bin\Debug\net5.0\Test_DataAccess.runtimeconfig.dev.json
 C:\Development\Entity-Framework\Test\Test_DataAccess\obj\Debug\net5.0\Test_DataAccess.genruntimeconfig.cache
+C:\Development\Entity-Framework\Test\Test_DataAccess\obj\Debug\net5.0\Test_DataAccess.csproj.CopyComplete
